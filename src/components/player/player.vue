@@ -106,7 +106,6 @@
 			@error="error"
 			@timeupdate="updateTime"
       @ended="end"
-      @canplaythrough="audioReady"
 		>
 			<!-- canplay加载到播放的事件 -->
 			<!-- error请求错误的事件 -->
@@ -427,20 +426,6 @@
         //图片渐隐
         this.$refs.middleL.style.opacity = opacity
         this.$refs.middleL.style[transitionDuration] = `${time}ms`
-      },
-
-      //
-      isApple(){
-        let isApple = false
-        let u = window.navigator.userAgent;
-        var ap = /(iPhone)|(iPad)|(iPod)|(Mac)/i;
-        if(ap.test(u)){
-          isApple = true;
-        }
-        return isApple
-      },
-      audioReady(){
-        alert("ok")
       }
 
 		},
